@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  new_hospital: MyString
+  name: MyString
+  address: MyString
+  contact_number: MyString
+  website: MyString
+  services: MyString
+  department: MyString
+
+two:
+  new_hospital: MyString
+  name: MyString
+  address: MyString
+  contact_number: MyString
+  website: MyString
+  services: MyString
+  department: MyString

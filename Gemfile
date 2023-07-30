@@ -11,7 +11,9 @@ gem "devise"
 gem "dotenv-rails"
 gem "sass-rails"
 gem "sprockets", "<4"
-
+gem "email_address"
+gem "jsonapi-serializer"
+gem "jwt"
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
