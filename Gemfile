@@ -6,7 +6,8 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.6"
 
-gem "activeadmin", github: "activeadmin/activeadmin", branch: "master"
+gem "activeadmin", "~> 2.13.1"
+gem 'arctic_admin'
 gem "devise"
 gem "dotenv-rails"
 gem "sass-rails"

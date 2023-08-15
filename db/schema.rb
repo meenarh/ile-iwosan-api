@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_25_222455) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_30_213922) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,6 +38,35 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_25_222455) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "hospital_admins", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "emailstring"
+    t.string "password_digest"
+    t.boolean "active"
+    t.date "token_expiration_date"
+    t.string "reset_password_token"
+    t.date "reset_password_sent_at"
+    t.integer "sign_in_count"
+    t.date "current_sign_in_at"
+    t.date "last_sign_in_at"
+    t.date "last_sign_out_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hospitals", force: :cascade do |t|
+    t.string "new_hospital"
+    t.string "name"
+    t.string "address"
+    t.string "contact_number"
+    t.string "website"
+    t.string "services"
+    t.string "department"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
