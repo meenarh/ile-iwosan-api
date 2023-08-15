@@ -43,7 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_30_213922) do
   create_table "hospital_admins", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "emailstring"
+    t.string "email"
     t.string "password_digest"
     t.boolean "active"
     t.date "token_expiration_date"

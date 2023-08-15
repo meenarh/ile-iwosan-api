@@ -1,4 +1,5 @@
-class API::v1::HospitalAdminsController < ApplicationController
+class Api::V1::HospitalAdminsController < ApplicationController
+    skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
     before_action :set_hospital_admin!, only: [:show, :update, :destroy]
 
     def show
@@ -28,8 +29,6 @@ class API::v1::HospitalAdminsController < ApplicationController
     private
 
     def hospital_admin_params
-        return params.permit(:first_name, :last_name, :email) if action_name ==update
-
         params.permit(:first_name, :last_name, :email, :password, :password_confirmation)
     end
 

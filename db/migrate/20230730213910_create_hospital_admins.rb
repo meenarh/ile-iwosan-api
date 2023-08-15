@@ -3,7 +3,7 @@ class CreateHospitalAdmins < ActiveRecord::Migration[7.0]
     create_table :hospital_admins do |t|
       t.string :first_name
       t.string :last_name
-      t.string :emailstring
+      t.string :email
       t.string :password_digest
       t.boolean :active
       t.date :token_expiration_date
