@@ -15,6 +15,7 @@ gem "sprockets", "<4"
 gem "email_address"
 gem "jsonapi-serializer"
 gem "jwt"
+gem 'bcrypt', '~> 3.1', '>= 3.1.19'
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"

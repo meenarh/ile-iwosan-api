@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1, path: "/" do
       resource :hospital_admin, only: %i[show create update destroy], path: "/admins"
+
+      namespace :auth, path: "/" do
+        post "/login", to: "sessions#create"
+      end
     end
   end
 end
